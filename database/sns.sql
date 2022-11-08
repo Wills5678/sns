@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 08 Nov 2022 pada 21.05
+-- Waktu pembuatan: 08 Nov 2022 pada 21.59
 -- Versi server: 10.4.11-MariaDB
 -- Versi PHP: 7.4.3
 
@@ -43,7 +43,8 @@ CREATE TABLE `comment_list` (
 
 INSERT INTO `comment_list` (`id`, `post_id`, `member_id`, `message`, `date_created`, `date_updated`) VALUES
 (2, 2, 1, 'Sample 101', '2022-05-03 13:57:13', '2022-05-03 13:57:13'),
-(3, 2, 1, '123', '2022-05-03 13:58:12', '2022-05-03 13:58:12');
+(3, 2, 1, '123', '2022-05-03 13:58:12', '2022-05-03 13:58:12'),
+(14, 13, 5, 'gigiig', '2022-11-09 03:57:37', '2022-11-09 03:57:37');
 
 -- --------------------------------------------------------
 
@@ -63,7 +64,8 @@ CREATE TABLE `like_list` (
 INSERT INTO `like_list` (`post_id`, `member_id`) VALUES
 (2, 1),
 (13, 3),
-(12, 3);
+(12, 3),
+(13, 5);
 
 -- --------------------------------------------------------
 
@@ -89,8 +91,10 @@ CREATE TABLE `member_list` (
 --
 
 INSERT INTO `member_list` (`id`, `firstname`, `middlename`, `lastname`, `email`, `password`, `avatar`, `status`, `date_created`, `date_updated`) VALUES
-(1, 'Mark', 'D', 'Cooper', 'mcooper@sample.com', 'c4ca4238a0b923820dcc509a6f75849b', 'uploads/member/1.png?v=1651542663', 0, '2022-05-03 09:51:03', '2022-11-09 01:39:15'),
-(3, 'bibi', 'bibi', 'bibi', 'bibi@gmail.com', '8115153332991997460b9f236e0da71a', NULL, 0, '2022-11-09 02:18:25', '2022-11-09 03:02:25');
+(1, 'cici', 'cici', 'cici', 'cici@sample.com', 'c4ca4238a0b923820dcc509a6f75849b', NULL, 0, '2022-05-03 09:51:03', '2022-11-09 03:58:54'),
+(3, 'bibi', 'bibi', 'bibi', 'bibi@gmail.com', '8115153332991997460b9f236e0da71a', NULL, 0, '2022-11-09 02:18:25', '2022-11-09 03:02:25'),
+(4, 'gigi', 'gigi', 'gigi', 'gigi@gmail.com', 'ec0c8fe7ad80dfe93c0de35448b1d581', NULL, 0, '2022-11-09 03:55:37', '2022-11-09 03:55:37'),
+(5, 'yiyi', 'yiyi', 'yiyi', 'yiyi@gmail.com', 'c0fb82c01c336cc6f4ca51b5f7cace0d', NULL, 0, '2022-11-09 03:56:58', '2022-11-09 03:56:58');
 
 -- --------------------------------------------------------
 
@@ -229,13 +233,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT untuk tabel `comment_list`
 --
 ALTER TABLE `comment_list`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT untuk tabel `member_list`
 --
 ALTER TABLE `member_list`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT untuk tabel `post_list`
